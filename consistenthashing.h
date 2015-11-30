@@ -147,6 +147,11 @@ public:
     {
         impl_ = new detail::consistent_hashing_impl<HashFunc>();
     }
+    
+    ~consistent_hasing()
+    {
+        delete impl_;
+    }
 
     value_type find(const key_type & key)
     {
